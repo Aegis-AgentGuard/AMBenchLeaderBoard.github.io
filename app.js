@@ -38,7 +38,8 @@ async function loadContributors() {
   try {
     const response = await fetch("https://api.github.com/repos/Aegis-AgentGuard/agent-risk-benchmark/contributors?per_page=12");
     if (!response.ok) return;
-    const contributors = (await response.json()).filter((person) => person.login.toLowerCase() !== "lyt");
+    const excludedContributors = new Set(["lyt", "wangxingyu7"]);
+    const contributors = (await response.json()).filter((person) => !excludedContributors.has(person.login.toLowerCase()));
     document.querySelector("#contributor-list").innerHTML = contributors.map((person) => `
       <a href="${person.html_url}">
         <img src="${person.avatar_url}&s=84" alt="" loading="lazy" />
