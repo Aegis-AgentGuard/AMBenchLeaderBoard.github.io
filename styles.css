@@ -95,7 +95,6 @@ tbody tr:hover { background: #f8fafc; }
 code { padding: 2px 4px; background: #edf1f5; font-size: 0.95em; }
 
 .contributors > p { max-width: 720px; color: var(--muted); line-height: 1.6; }
-.text-link { color: var(--navy); font-size: 13px; font-weight: 700; }
 .contributor-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); margin-top: 22px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .contributor-list a { display: flex; min-height: 74px; align-items: center; gap: 12px; padding: 12px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 700; text-decoration: none; }
 .contributor-list a:hover { background: var(--blue-soft); }
