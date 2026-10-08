@@ -1,0 +1,33 @@
+{
+  "benchmark": "AMBench",
+  "updated": "2026-09-16",
+  "scope": {
+    "tasks": 48,
+    "conditions": 7,
+    "repetitions": 3,
+    "runs_per_configuration": 1008,
+    "excluded_cases": ["email_reply_meeting"]
+  },
+  "results": [
+    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"NanoBot","completion":55.3,"compliance":76.6,"success":37.8},
+    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"Codex","completion":60.5,"compliance":60.7,"success":34.2},
+    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"OpenClaw","completion":56.9,"compliance":63.5,"success":34.0},
+    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"NullClaw","completion":45.0,"compliance":79.4,"success":33.3},
+    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"OpenClaw","completion":53.3,"compliance":75.6,"success":32.9},
+    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"Codex","completion":52.7,"compliance":76.5,"success":32.0},
+    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"NullClaw","completion":45.1,"compliance":76.2,"success":31.9},
+    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"NanoBot","completion":52.6,"compliance":68.8,"success":31.7},
+    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"Codex","completion":50.5,"compliance":72.5,"success":31.1},
+    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"Codex","completion":48.5,"compliance":78.5,"success":29.5},
+    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"Codex","completion":43.0,"compliance":69.8,"success":26.2},
+    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"NullClaw","completion":37.2,"compliance":80.7,"success":26.1},
+    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"NullClaw","completion":44.7,"compliance":79.5,"success":26.0},
+    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"OpenClaw","completion":38.8,"compliance":80.9,"success":25.8},
+    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"OpenClaw","completion":45.3,"compliance":72.7,"success":25.2},
+    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"NanoBot","completion":40.5,"compliance":72.2,"success":24.6},
+    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"NullClaw","completion":40.4,"compliance":78.3,"success":22.1},
+    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"OpenClaw","completion":31.0,"compliance":76.5,"success":20.1},
+    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"NanoBot","completion":36.0,"compliance":75.6,"success":17.9},
+    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"NanoBot","completion":31.3,"compliance":72.5,"success":14.5}
+  ]
+}
