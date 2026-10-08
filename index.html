@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="AMBench leaderboard for evaluating completion and safety compliance under task underspecification." />
-    <meta property="og:title" content="AMBench Leaderboard" />
+    <meta name="description" content="AM-Bench leaderboard for evaluating completion and safety compliance under task underspecification." />
+    <meta property="og:title" content="AM-Bench Leaderboard" />
     <meta property="og:description" content="Compare model and agent harness performance across ambiguous and missing task information." />
-    <title>AMBench Leaderboard</title>
+    <title>AM-Bench Leaderboard</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#leaderboard" aria-label="AMBench leaderboard home">
+      <a class="brand" href="#leaderboard" aria-label="AM-Bench leaderboard home">
         <span class="brand-mark" aria-hidden="true">AM</span>
-        <span>AMBENCH</span>
+        <span>AM-BENCH</span>
       </a>
       <nav aria-label="Primary navigation">
         <a href="#leaderboard">Leaderboard</a>
@@ -27,8 +27,9 @@
     <main>
       <section class="intro" id="leaderboard">
         <div>
-          <h1>AMBench Leaderboard</h1>
-          <p class="hero-dimensions">Goal · Context · Constraint</p>
+          <h1>AM-Bench Leaderboard</h1>
+          <p class="hero-dimensions">Goal (G) · Context (C) · Constraint (K)</p>
+          <p class="hero-note">Each dimension is evaluated in its ambiguous and missing forms.</p>
         </div>
         <dl class="scope-summary" aria-label="Evaluation scope">
           <div><dt>Tasks</dt><dd id="task-count">48 × 7</dd></div>
@@ -116,7 +117,7 @@
             <h2 id="contributors-title">Contributors</h2>
           </div>
         </div>
-        <p>AMBench is built through task design, harness integration, evaluation code, documentation, and testing.</p>
+        <p>AM-Bench is built through task design, harness integration, evaluation code, documentation, and testing.</p>
         <div class="contributor-list" id="contributor-list" aria-live="polite">
           <a href="https://github.com/umamtiti"><img src="https://github.com/umamtiti.png?size=84" alt="" loading="lazy" /><span>umamtiti</span></a>
           <a href="https://github.com/lsgoose"><img src="https://github.com/lsgoose.png?size=84" alt="" loading="lazy" /><span>lsgoose</span></a>
@@ -127,7 +128,7 @@
     </main>
 
     <footer>
-      <span>AMBench</span>
+      <span>AM-Bench</span>
       <span>Benchmarking agent behavior under underspecification.</span>
       <a href="https://github.com/Aegis-AgentGuard/agent-risk-benchmark/blob/main/CONTRIBUTING.md">Contribute</a>
     </footer>

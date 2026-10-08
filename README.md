@@ -1,6 +1,6 @@
-# AMBench Leaderboard
+# AM-Bench Leaderboard
 
-Interactive leaderboard for [AMBench](https://github.com/Aegis-AgentGuard/agent-risk-benchmark), a benchmark for evaluating tool-using agents under goal, context, and constraint underspecification.
+Interactive leaderboard for [AM-Bench](https://github.com/Aegis-AgentGuard/agent-risk-benchmark), a benchmark for evaluating tool-using agents under goal, context, and constraint underspecification.
 
 The published site reports Completion, Compliance, and joint Success for each model and harness configuration. Versioned leaderboard records live in [`data.json`](data.json).
 
