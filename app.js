@@ -60,8 +60,6 @@ async function init() {
   addOptions("#model-filter", models, "Filter by model");
 
   document.querySelector("#task-count").textContent = state.data.scope.tasks;
-  document.querySelector("#condition-count").textContent = state.data.scope.conditions;
-  document.querySelector("#run-count").textContent = state.data.scope.runs_per_configuration.toLocaleString();
   document.querySelector("#updated").textContent = state.data.updated;
   document.querySelector("#updated").dateTime = state.data.updated;
 
