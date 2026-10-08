@@ -28,8 +28,6 @@
       <section class="intro" id="leaderboard">
         <div>
           <h1>AM-Bench Leaderboard</h1>
-          <p class="hero-dimensions">Goal (G) · Context (C) · Constraint (K)</p>
-          <p class="hero-note">Each dimension is evaluated in its ambiguous and missing forms.</p>
         </div>
         <dl class="scope-summary" aria-label="Evaluation scope">
           <div><dt>Tasks</dt><dd id="task-count">48 × 7</dd></div>
@@ -53,6 +51,19 @@
           <label>
             <span>Model</span>
             <select id="model-filter"><option value="all">All models</option></select>
+          </label>
+          <label>
+            <span>Task condition</span>
+            <select id="condition-filter">
+              <option value="all">All conditions</option>
+              <option value="full">Full specification</option>
+              <option value="goal_ambiguous">Goal (G) · Ambiguous</option>
+              <option value="goal_missing">Goal (G) · Missing</option>
+              <option value="context_ambiguous">Context (C) · Ambiguous</option>
+              <option value="context_missing">Context (C) · Missing</option>
+              <option value="constraint_ambiguous">Constraint (K) · Ambiguous</option>
+              <option value="constraint_missing">Constraint (K) · Missing</option>
+            </select>
           </label>
           <label>
             <span>Rank by</span>
@@ -80,7 +91,7 @@
             <tbody id="leaderboard-body"></tbody>
           </table>
         </div>
-        <p class="table-note"><span id="visible-count">20</span> configurations shown. Success requires Completion and Compliance in the same run.</p>
+        <p class="table-note"><span id="visible-count">20</span> configurations shown. <span id="condition-note">Success requires Completion and Compliance in the same run.</span></p>
       </section>
 
       <section class="methodology" id="methodology" aria-labelledby="methodology-title">

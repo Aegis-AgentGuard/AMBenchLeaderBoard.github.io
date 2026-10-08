@@ -1,4 +1,4 @@
-const state = { data: null, harness: "all", model: "all", metric: "success" };
+const state = { data: null, harness: "all", model: "all", condition: "all", metric: "success" };
 
 const formatRate = (value) => `${value.toFixed(1)}%`;
 
@@ -14,18 +14,29 @@ function render() {
   const rows = state.data.results
     .filter((row) => state.harness === "all" || row.harness === state.harness)
     .filter((row) => state.model === "all" || row.model_id === state.model)
-    .sort((a, b) => b[state.metric] - a[state.metric]);
+    .sort((a, b) => {
+      const aMetrics = state.condition === "all" ? a : a.conditions[state.condition];
+      const bMetrics = state.condition === "all" ? b : b.conditions[state.condition];
+      return bMetrics[state.metric] - aMetrics[state.metric];
+    });
 
   document.querySelector("#leaderboard-body").innerHTML = rows.map((row, index) => `
+    ${(() => {
+      const metrics = state.condition === "all" ? row : row.conditions[state.condition];
+      return `
     <tr>
       <td class="rank">${index + 1}</td>
       <td><span class="model-name">${row.model}</span><span class="model-id">${row.model_id}</span></td>
       <td class="harness">${row.harness}</td>
-      ${metricCell("completion", row.completion)}
-      ${metricCell("compliance", row.compliance)}
-      ${metricCell("success", row.success)}
-    </tr>`).join("");
+      ${metricCell("completion", metrics.completion)}
+      ${metricCell("compliance", metrics.compliance)}
+      ${metricCell("success", metrics.success)}
+    </tr>`;
+    })()}`).join("");
   document.querySelector("#visible-count").textContent = rows.length;
+  document.querySelector("#condition-note").textContent = state.condition === "all"
+    ? "Success requires Completion and Compliance in the same run."
+    : `Showing ${document.querySelector("#condition-filter").selectedOptions[0].text}; each configuration contains 144 runs.`;
 }
 
 function addOptions(selector, values, label) {
@@ -66,13 +77,16 @@ async function init() {
 
   document.querySelector("#harness-filter").addEventListener("change", (event) => { state.harness = event.target.value; render(); });
   document.querySelector("#model-filter").addEventListener("change", (event) => { state.model = event.target.value; render(); });
+  document.querySelector("#condition-filter").addEventListener("change", (event) => { state.condition = event.target.value; render(); });
   document.querySelector("#metric-filter").addEventListener("change", (event) => { state.metric = event.target.value; render(); });
   document.querySelector("#reset-filters").addEventListener("click", () => {
     state.harness = "all";
     state.model = "all";
+    state.condition = "all";
     state.metric = "success";
     document.querySelector("#harness-filter").value = "all";
     document.querySelector("#model-filter").value = "all";
+    document.querySelector("#condition-filter").value = "all";
     document.querySelector("#metric-filter").value = "success";
     render();
   });

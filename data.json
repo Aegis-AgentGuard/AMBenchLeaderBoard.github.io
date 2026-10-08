@@ -1,33 +1,1055 @@
 {
-  "benchmark": "AMBench",
+  "benchmark": "AM-Bench",
   "updated": "2026-09-16",
   "scope": {
     "tasks": 48,
     "conditions": 7,
     "repetitions": 3,
     "runs_per_configuration": 1008,
-    "excluded_cases": ["email_reply_meeting"]
+    "excluded_cases": [
+      "email_reply_meeting"
+    ]
   },
   "results": [
-    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"NanoBot","completion":55.3,"compliance":76.6,"success":37.8},
-    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"Codex","completion":60.5,"compliance":60.7,"success":34.2},
-    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"OpenClaw","completion":56.9,"compliance":63.5,"success":34.0},
-    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"NullClaw","completion":45.0,"compliance":79.4,"success":33.3},
-    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"OpenClaw","completion":53.3,"compliance":75.6,"success":32.9},
-    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"Codex","completion":52.7,"compliance":76.5,"success":32.0},
-    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"NullClaw","completion":45.1,"compliance":76.2,"success":31.9},
-    {"model":"DeepSeek V4 Flash","model_id":"deepseek/deepseek-v4-flash-0731","harness":"NanoBot","completion":52.6,"compliance":68.8,"success":31.7},
-    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"Codex","completion":50.5,"compliance":72.5,"success":31.1},
-    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"Codex","completion":48.5,"compliance":78.5,"success":29.5},
-    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"Codex","completion":43.0,"compliance":69.8,"success":26.2},
-    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"NullClaw","completion":37.2,"compliance":80.7,"success":26.1},
-    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"NullClaw","completion":44.7,"compliance":79.5,"success":26.0},
-    {"model":"GLM-5.3","model_id":"z-ai/glm-5.3","harness":"OpenClaw","completion":38.8,"compliance":80.9,"success":25.8},
-    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"OpenClaw","completion":45.3,"compliance":72.7,"success":25.2},
-    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"NanoBot","completion":40.5,"compliance":72.2,"success":24.6},
-    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"NullClaw","completion":40.4,"compliance":78.3,"success":22.1},
-    {"model":"DeepSeek V4 Pro","model_id":"deepseek/deepseek-v4-pro-0813","harness":"OpenClaw","completion":31.0,"compliance":76.5,"success":20.1},
-    {"model":"GPT-5.6 Sol","model_id":"openai/gpt-5.6-sol","harness":"NanoBot","completion":36.0,"compliance":75.6,"success":17.9},
-    {"model":"GPT-5.6 Luna","model_id":"openai/gpt-5.6-luna","harness":"NanoBot","completion":31.3,"compliance":72.5,"success":14.5}
+    {
+      "model": "GLM-5.3",
+      "model_id": "z-ai/glm-5.3",
+      "harness": "NanoBot",
+      "completion": 55.3,
+      "compliance": 76.6,
+      "success": 37.8,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 79.9,
+          "compliance": 51.4,
+          "success": 43.8
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 82.6,
+          "compliance": 2.1,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 54.2,
+          "compliance": 95.1,
+          "success": 52.1
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 33.3,
+          "compliance": 94.4,
+          "success": 32.6
+        },
+        "full": {
+          "runs": 144,
+          "completion": 81.3,
+          "compliance": 100,
+          "success": 81.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 43.1,
+          "compliance": 97.9,
+          "success": 43.1
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 12.5,
+          "compliance": 95.1,
+          "success": 11.8
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "harness": "Codex",
+      "completion": 60.5,
+      "compliance": 60.7,
+      "success": 34.2,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 86.1,
+          "compliance": 29.2,
+          "success": 26.4
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 84,
+          "compliance": 2.8,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 66,
+          "compliance": 72.9,
+          "success": 48.6
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 38.9,
+          "compliance": 77.8,
+          "success": 31.9
+        },
+        "full": {
+          "runs": 144,
+          "completion": 84.7,
+          "compliance": 96.5,
+          "success": 83.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 37.5,
+          "compliance": 72.9,
+          "success": 34
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 26.4,
+          "compliance": 72.9,
+          "success": 15.3
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "harness": "OpenClaw",
+      "completion": 56.9,
+      "compliance": 63.5,
+      "success": 34.0,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 79.2,
+          "compliance": 29.2,
+          "success": 25.7
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 75.7,
+          "compliance": 0,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 56.3,
+          "compliance": 88.9,
+          "success": 51.4
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 34.7,
+          "compliance": 86.8,
+          "success": 28.5
+        },
+        "full": {
+          "runs": 144,
+          "completion": 90.3,
+          "compliance": 98.6,
+          "success": 88.9
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 42.4,
+          "compliance": 75,
+          "success": 31.9
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 20.1,
+          "compliance": 66,
+          "success": 11.8
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "harness": "NullClaw",
+      "completion": 45.0,
+      "compliance": 79.4,
+      "success": 33.3,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 64.6,
+          "compliance": 53.5,
+          "success": 43.1
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 60.4,
+          "compliance": 4.9,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 20.8,
+          "compliance": 99.3,
+          "success": 20.8
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 31.9,
+          "compliance": 99.3,
+          "success": 31.9
+        },
+        "full": {
+          "runs": 144,
+          "completion": 76.4,
+          "compliance": 100,
+          "success": 76.4
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 34.7,
+          "compliance": 99.3,
+          "success": 34.7
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 26.4,
+          "compliance": 99.3,
+          "success": 26.4
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "model_id": "openai/gpt-5.6-sol",
+      "harness": "OpenClaw",
+      "completion": 53.3,
+      "compliance": 75.6,
+      "success": 32.9,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 68.8,
+          "compliance": 50,
+          "success": 27.1
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 93.1,
+          "compliance": 0.7,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 36.8,
+          "compliance": 89.6,
+          "success": 34
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 16,
+          "compliance": 93.1,
+          "success": 13.2
+        },
+        "full": {
+          "runs": 144,
+          "completion": 86.8,
+          "compliance": 97.9,
+          "success": 84.7
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 41,
+          "compliance": 99.3,
+          "success": 41
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 30.6,
+          "compliance": 98.6,
+          "success": 30.6
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "harness": "Codex",
+      "completion": 52.7,
+      "compliance": 76.5,
+      "success": 32.0,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 93.8,
+          "compliance": 50,
+          "success": 47.2
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 93.8,
+          "compliance": 4.2,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 45.1,
+          "compliance": 91.7,
+          "success": 43.1
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 25,
+          "compliance": 97.9,
+          "success": 25
+        },
+        "full": {
+          "runs": 144,
+          "completion": 88.9,
+          "compliance": 97.9,
+          "success": 88.2
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 14.6,
+          "compliance": 97.9,
+          "success": 13.9
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 7.6,
+          "compliance": 95.8,
+          "success": 6.9
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "harness": "NullClaw",
+      "completion": 45.1,
+      "compliance": 76.2,
+      "success": 31.9,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 63.9,
+          "compliance": 39.6,
+          "success": 34
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 62.5,
+          "compliance": 2.8,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 26.4,
+          "compliance": 99.3,
+          "success": 26.4
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 41,
+          "compliance": 97.2,
+          "success": 41
+        },
+        "full": {
+          "runs": 144,
+          "completion": 74.3,
+          "compliance": 100,
+          "success": 74.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 36.8,
+          "compliance": 97.2,
+          "success": 36.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 11.1,
+          "compliance": 97.2,
+          "success": 11.1
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek/deepseek-v4-flash-0731",
+      "harness": "NanoBot",
+      "completion": 52.6,
+      "compliance": 68.8,
+      "success": 31.7,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 76.4,
+          "compliance": 29.2,
+          "success": 22.2
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 79.9,
+          "compliance": 4.9,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 48.6,
+          "compliance": 91,
+          "success": 44.4
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 33.3,
+          "compliance": 91,
+          "success": 31.3
+        },
+        "full": {
+          "runs": 144,
+          "completion": 81.3,
+          "compliance": 98.6,
+          "success": 81.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 37.5,
+          "compliance": 90.3,
+          "success": 34.7
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 11.1,
+          "compliance": 77.1,
+          "success": 8.3
+        }
+      }
+    },
+    {
+      "model": "GLM-5.3",
+      "model_id": "z-ai/glm-5.3",
+      "harness": "Codex",
+      "completion": 50.5,
+      "compliance": 72.5,
+      "success": 31.1,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 75.7,
+          "compliance": 42.4,
+          "success": 33.3
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 84.7,
+          "compliance": 3.5,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 45.8,
+          "compliance": 90.3,
+          "success": 42.4
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 20.8,
+          "compliance": 86.8,
+          "success": 16.7
+        },
+        "full": {
+          "runs": 144,
+          "completion": 81.9,
+          "compliance": 97.2,
+          "success": 81.9
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 31.3,
+          "compliance": 95.1,
+          "success": 30.6
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 13.2,
+          "compliance": 92.4,
+          "success": 12.5
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "model_id": "openai/gpt-5.6-sol",
+      "harness": "Codex",
+      "completion": 48.5,
+      "compliance": 78.5,
+      "success": 29.5,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 81.3,
+          "compliance": 55.6,
+          "success": 41.7
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 92.4,
+          "compliance": 4.2,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 41.7,
+          "compliance": 95.8,
+          "success": 41
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 9,
+          "compliance": 97.2,
+          "success": 8.3
+        },
+        "full": {
+          "runs": 144,
+          "completion": 82.6,
+          "compliance": 99.3,
+          "success": 82.6
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 21.5,
+          "compliance": 97.9,
+          "success": 21.5
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 11.1,
+          "compliance": 99.3,
+          "success": 11.1
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "harness": "Codex",
+      "completion": 43.0,
+      "compliance": 69.8,
+      "success": 26.2,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 69.4,
+          "compliance": 32.6,
+          "success": 29.2
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 68.1,
+          "compliance": 0,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 28.5,
+          "compliance": 85.4,
+          "success": 22.9
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 21.5,
+          "compliance": 88.2,
+          "success": 21.5
+        },
+        "full": {
+          "runs": 144,
+          "completion": 71.5,
+          "compliance": 93.8,
+          "success": 68.8
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 21.5,
+          "compliance": 94.4,
+          "success": 20.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 20.1,
+          "compliance": 94.4,
+          "success": 20.1
+        }
+      }
+    },
+    {
+      "model": "GLM-5.3",
+      "model_id": "z-ai/glm-5.3",
+      "harness": "NullClaw",
+      "completion": 37.2,
+      "compliance": 80.7,
+      "success": 26.1,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 65.3,
+          "compliance": 61.8,
+          "success": 43.1
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 54.9,
+          "compliance": 15.3,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 13.2,
+          "compliance": 97.9,
+          "success": 13.2
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 27.8,
+          "compliance": 94.4,
+          "success": 27.8
+        },
+        "full": {
+          "runs": 144,
+          "completion": 59.7,
+          "compliance": 98.6,
+          "success": 59
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 29.9,
+          "compliance": 98.6,
+          "success": 29.9
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 9.7,
+          "compliance": 97.9,
+          "success": 9.7
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "model_id": "openai/gpt-5.6-sol",
+      "harness": "NullClaw",
+      "completion": 44.7,
+      "compliance": 79.5,
+      "success": 26.0,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 86.8,
+          "compliance": 56.3,
+          "success": 48.6
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 93.1,
+          "compliance": 3.5,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 12.5,
+          "compliance": 99.3,
+          "success": 12.5
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 7.6,
+          "compliance": 99.3,
+          "success": 7.6
+        },
+        "full": {
+          "runs": 144,
+          "completion": 84.7,
+          "compliance": 100,
+          "success": 84.7
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 18.8,
+          "compliance": 97.9,
+          "success": 18.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 9.7,
+          "compliance": 100,
+          "success": 9.7
+        }
+      }
+    },
+    {
+      "model": "GLM-5.3",
+      "model_id": "z-ai/glm-5.3",
+      "harness": "OpenClaw",
+      "completion": 38.8,
+      "compliance": 80.9,
+      "success": 25.8,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 64.6,
+          "compliance": 62.5,
+          "success": 38.9
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 63.9,
+          "compliance": 12.5,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 30.6,
+          "compliance": 97.9,
+          "success": 29.9
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 27.1,
+          "compliance": 96.5,
+          "success": 26.4
+        },
+        "full": {
+          "runs": 144,
+          "completion": 53.5,
+          "compliance": 100,
+          "success": 53.5
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 25,
+          "compliance": 97.9,
+          "success": 25
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 6.9,
+          "compliance": 98.6,
+          "success": 6.9
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "harness": "OpenClaw",
+      "completion": 45.3,
+      "compliance": 72.7,
+      "success": 25.2,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 71.5,
+          "compliance": 44.4,
+          "success": 25.7
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 88.9,
+          "compliance": 4.2,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 31.9,
+          "compliance": 81.3,
+          "success": 29.9
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 13.2,
+          "compliance": 93.1,
+          "success": 10.4
+        },
+        "full": {
+          "runs": 144,
+          "completion": 83.3,
+          "compliance": 100,
+          "success": 83.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 13.9,
+          "compliance": 97.2,
+          "success": 13.9
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 14.6,
+          "compliance": 88.9,
+          "success": 13.2
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "harness": "NanoBot",
+      "completion": 40.5,
+      "compliance": 72.2,
+      "success": 24.6,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 70.1,
+          "compliance": 40.3,
+          "success": 31.9
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 70.1,
+          "compliance": 2.8,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 12.5,
+          "compliance": 93.1,
+          "success": 11.8
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 13.2,
+          "compliance": 86.8,
+          "success": 12.5
+        },
+        "full": {
+          "runs": 144,
+          "completion": 82.6,
+          "compliance": 97.9,
+          "success": 81.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 18.8,
+          "compliance": 93.1,
+          "success": 18.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 16,
+          "compliance": 91.7,
+          "success": 16
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "harness": "NullClaw",
+      "completion": 40.4,
+      "compliance": 78.3,
+      "success": 22.1,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 72.2,
+          "compliance": 57.6,
+          "success": 36.1
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 91.7,
+          "compliance": 2.1,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 6.9,
+          "compliance": 95.8,
+          "success": 6.9
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 4.9,
+          "compliance": 95.1,
+          "success": 4.9
+        },
+        "full": {
+          "runs": 144,
+          "completion": 86.1,
+          "compliance": 100,
+          "success": 86.1
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 15.3,
+          "compliance": 97.9,
+          "success": 15.3
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 5.6,
+          "compliance": 99.3,
+          "success": 5.6
+        }
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "model_id": "deepseek/deepseek-v4-pro-0813",
+      "harness": "OpenClaw",
+      "completion": 31.0,
+      "compliance": 76.5,
+      "success": 20.1,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 39.6,
+          "compliance": 47.2,
+          "success": 16.7
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 45.1,
+          "compliance": 14.6,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 26.4,
+          "compliance": 91.7,
+          "success": 22.2
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 18.8,
+          "compliance": 90.3,
+          "success": 15.3
+        },
+        "full": {
+          "runs": 144,
+          "completion": 35.4,
+          "compliance": 100,
+          "success": 35.4
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 29.2,
+          "compliance": 97.9,
+          "success": 29.2
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 22.2,
+          "compliance": 93.8,
+          "success": 22.2
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "model_id": "openai/gpt-5.6-sol",
+      "harness": "NanoBot",
+      "completion": 36.0,
+      "compliance": 75.6,
+      "success": 17.9,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 73.6,
+          "compliance": 52.8,
+          "success": 34
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 86.8,
+          "compliance": 4.2,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 2.8,
+          "compliance": 88.9,
+          "success": 2.1
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 2.1,
+          "compliance": 91.7,
+          "success": 2.1
+        },
+        "full": {
+          "runs": 144,
+          "completion": 83.3,
+          "compliance": 97.9,
+          "success": 83.3
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 2.8,
+          "compliance": 96.5,
+          "success": 2.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 0.7,
+          "compliance": 97.2,
+          "success": 0.7
+        }
+      }
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "model_id": "openai/gpt-5.6-luna",
+      "harness": "NanoBot",
+      "completion": 31.3,
+      "compliance": 72.5,
+      "success": 14.5,
+      "conditions": {
+        "constraint_ambiguous": {
+          "runs": 144,
+          "completion": 63.9,
+          "compliance": 47.2,
+          "success": 25
+        },
+        "constraint_missing": {
+          "runs": 144,
+          "completion": 79.2,
+          "compliance": 4.9,
+          "success": 0
+        },
+        "context_ambiguous": {
+          "runs": 144,
+          "completion": 1.4,
+          "compliance": 88.2,
+          "success": 1.4
+        },
+        "context_missing": {
+          "runs": 144,
+          "completion": 0,
+          "compliance": 81.9,
+          "success": 0
+        },
+        "full": {
+          "runs": 144,
+          "completion": 72.2,
+          "compliance": 99.3,
+          "success": 72.2
+        },
+        "goal_ambiguous": {
+          "runs": 144,
+          "completion": 2.8,
+          "compliance": 92.4,
+          "success": 2.8
+        },
+        "goal_missing": {
+          "runs": 144,
+          "completion": 0,
+          "compliance": 93.8,
+          "success": 0
+        }
+      }
+    }
   ]
 }
