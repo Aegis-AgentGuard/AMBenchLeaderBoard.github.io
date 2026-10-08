@@ -59,7 +59,7 @@ async function init() {
   addOptions("#harness-filter", harnesses, "Filter by harness");
   addOptions("#model-filter", models, "Filter by model");
 
-  document.querySelector("#task-count").textContent = state.data.scope.tasks;
+  document.querySelector("#task-count").textContent = `${state.data.scope.tasks} × ${state.data.scope.conditions}`;
   document.querySelector("#updated").textContent = state.data.updated;
   document.querySelector("#updated").dateTime = state.data.updated;
 
